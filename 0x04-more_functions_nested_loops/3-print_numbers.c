@@ -7,9 +7,9 @@
  */
 void print_numbers(void)
 {
-	int i = '0';
+	int num;
 
-	for (; i <= '9'; i++)
-		_putchar(i);
+	for (num = 0; num <= 9; num++)
+		_putchar((num % 10) + '0');
 	_putchar('\n');
 }
