@@ -1,17 +1,15 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - it calculates the length of a string recursively
- * and returns the length
- * @s: pointer to string params
- * Return: recursion
+ * factorial - a function that returns the factorial of a number.
+ * @n: An input integer
+ * Return: The factorial of n
  */
-
-int _strlen_recursion(char *s)
+int factorial(int n)
 {
-	if (!*s)
-	{
-		return (0);
-	}
-	return (1 + _strlen_recursion(++s));
+	if (n < 0)
+		return (-1);
+	if (n <= 1)
+		return (1);
+	return (n * factorial(n - 1));
 }
